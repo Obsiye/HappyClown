@@ -1,7 +1,7 @@
 'use strict'
 
 function Game(){
-    this.jokes = []
+    this.jokes = [];
 }
 
 Game.prototype.getJokes = function (joke) {

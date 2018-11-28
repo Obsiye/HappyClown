@@ -15,6 +15,6 @@ Joke.prototype.getLaughAmount = function(){
     return this.laughAmount;
 }
 
-Joke.all = function() {
-    return Joke.jokes;
+Joke.prototype.getDescription = function(){
+    return this.description;
 }
