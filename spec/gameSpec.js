@@ -14,13 +14,13 @@ describe('Game', function(){
 
 	it('should store jokes',function(){
 		game.addJoke(mockJoke);
-		expect(game.getJokes().length).toEqual(1);
+		expect(game.getJokes().length).toEqual(5);
 	});
 
 	it('can access stored jokes description',function(){
 		game.addJoke(mockJoke);
 		jokes = game.getJokes();
-		joke = jokes[0];
+		joke = jokes[4];
 		expect(joke.getDescription()).toEqual('begin to laugh');
 	});
 
