@@ -9,7 +9,7 @@ app.use("/src", express.static(__dirname + '/src'));
 
 // viewed at based directory http://localhost:8080/
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/'));
+    res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
 app.listen(process.env.PORT || 8080);
