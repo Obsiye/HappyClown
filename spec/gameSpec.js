@@ -5,19 +5,28 @@ describe('Game', function(){
 	var mockJoke;
 	var jokes;
 	var joke;
+	var happyClown;
 
 	beforeEach(function(){
-		game = new Game();
+		happyClown = jasmine.createSpyObj('happyClown', ['getHappyStatus','getHappyClown']);
+		happyClown.getHappyClown.and.returnValue(this);
+		happyClown.getHappyStatus.and.returnValue(10);
+		game = new Game(happyClown);
 		mockJoke = jasmine.createSpyObj('joke', ['getDescription']);
 		mockJoke.getDescription.and.returnValue('begin to laugh');
 	});
 
-	it('should store jokes',function(){
+	it('should store jokes', function(){
 		game.addJoke(mockJoke);
 		expect(game.getJokes().length).toEqual(5);
 	});
 
-	it('can access stored jokes description',function(){
+	it('should store a happyclown', function () {
+		happyClown = game.getHappyClown();
+		expect(happyClown.getHappyStatus()).toEqual(10);
+	});
+
+	it('can access stored jokes description', function(){
 		game.addJoke(mockJoke);
 		jokes = game.getJokes();
 		joke = jokes[4];
