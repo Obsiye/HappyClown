@@ -1,10 +1,10 @@
 'use strict'
 
 function Game(happyClown){
-	this.jokes = [new Joke(1, 'the chicken did not cross the road'),
-		new Joke(1, 'an eye for an eye but not before an e'),
-		new Joke(10, 'just laugh clown'),
-		new Joke(30, 'ha')
+	this.jokes = [new Joke(-1, 'the chicken did not cross the road'),
+		new Joke(1, 'an eye for an eye but not before an e. hehe.'),
+		new Joke(2, 'just laugh please'),
+		new Joke(5, 'ha')
 	];
 	this.happyClown = happyClown;
 }

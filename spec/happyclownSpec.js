@@ -7,11 +7,8 @@ describe('HappyClown', function(){
 
 	beforeEach(function(){
 		happyClown = new HappyClown();
-
 		mockJoke = jasmine.createSpyObj('joke', ['getLaughAmount']);
-
 		mockJoke.getLaughAmount.and.returnValue(10);
-
 	});
 
   it('should return the default happinness status value of the clown', function(){
