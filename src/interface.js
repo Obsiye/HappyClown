@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var happyClown = new HappyClown();
 	var game = new Game(happyClown);
 	var clown;
+	var buttons;
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
@@ -34,7 +35,7 @@ $(document).ready(function(){
 	displayQuestion(game);
 	displayClownHappyStatus(game);
 	
-	var buttons = $(':button');
+	buttons = $(':button');
 	for (var i = 0; i < buttons.length; i++) {
 		
 		$(buttons[i]).on('click', function(){
