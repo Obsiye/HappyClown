@@ -58,7 +58,9 @@ button{
 	cursor: pointer;
 	font-size: 50px;
 	background-color: #cd853f;
-	border: 10px solid black;
+	border-top: 10px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
 }
 
 button:focus{

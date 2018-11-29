@@ -1,0 +1,26 @@
+{
+  "name": "happyclown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Obsiye/HappyClown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Obsiye/HappyClown/issues"
+  },
+  "homepage": "https://github.com/Obsiye/HappyClown#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
