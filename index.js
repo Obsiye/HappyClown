@@ -11,10 +11,12 @@ app.use("/src", express.static(__dirname + '/src'));
 
 var s3 = new AWS.S3();
 
-var params = {
-    Bucket: "happyclownjokes",
-    MaxKeys: 2
-};
+// var params = {
+//     Bucket: "happyclownjokes",
+//     MaxKeys: 2
+// };
+
+var params = {Bucket: 'myBucket', Key: 'data.json'};
 
 s3.getObject(params, function (err, data) {
     if (err) console.log(err, err.stack); // an error occurred
