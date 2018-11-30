@@ -12,7 +12,7 @@ $(document).ready(function(){
 			
 			alert(data);
 			alert(typeof data);
-			console.log(data);
+			console.log(data.jokes);
 			info = data;
 		}
 	  });
