@@ -20,7 +20,7 @@ s3.listObjects(params, function (err, data) {
     if (err) console.log(err, err.stack); // an error occurred
     else {
         dataStore = data;
-    }          // successful response
+    }
 });
 
 AWS.config.update({
@@ -30,9 +30,9 @@ AWS.config.update({
 
 app.get('/', function (req, res) {
     console.log(dataStore.jokes);
-    // res.write(dataStore);
-    // res.end();
-    res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
+     res.write(dataStore);
+    res.end();
+    // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
 app.listen(process.env.PORT || 8080);
