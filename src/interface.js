@@ -12,7 +12,6 @@ $(document).ready(function(){
 			
 			alert(data);
 			alert(data.jokes);
-			alert(data.jokes[0]);
 			console.log(data);
 			info = data;
 		}
