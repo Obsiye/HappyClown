@@ -3,8 +3,17 @@ $(document).ready(function(){
 	var game = new Game(happyClown);
 	var clown;
 	var buttons;
+	var info;
 
+	$.ajax({
+		url: '/data',
+		type: 'GET',
+		success: function(data) {
+			$('#title').text(data);
+		}
+	  });
 
+	
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
