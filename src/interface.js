@@ -9,7 +9,7 @@ $(document).ready(function(){
 		url: '/data',
 		type: 'GET',
 		success: function(data) {
-			$('#title').text(data);
+			info = data
 		}
 	  });
 
@@ -17,7 +17,8 @@ $(document).ready(function(){
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
-		
+		alert(info);
+		alert(info[0]);
 		$('#happyStatus').text(clown.getHappyStatus());
 
 	}
