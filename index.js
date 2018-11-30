@@ -26,12 +26,7 @@ s3.getObject(params, function (err, data) {
             console.log(err, err.stack);
  } // an error occurred
     else {
-
-        fs.readFile(data, (err, data) => {  
-            if (err) throw err;
-            dataStore = JSON.parse(data);
-        });
-        
+        dataStore = JSON.parse(data);
     }
 });
 
@@ -42,8 +37,7 @@ AWS.config.update({
 
 
 app.get('/', function (req, res) {
-    res.header("Content-Type",'application/json');
-    res.send(JSON.stringify(dataStore));
+    res.send(JSON.stringify(dataStore.toString()));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
