@@ -26,8 +26,8 @@ s3.listObjects(params, function (err, data) {
 
 app.get('/', function (req, res) {
     console.log(dataStore);
-    response.write(dataStore);
-    response.end();
+    res.write(dataStore);
+    res.end();
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
