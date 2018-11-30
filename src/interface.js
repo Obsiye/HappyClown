@@ -12,7 +12,8 @@ $(document).ready(function(){
 			
 			alert(data);
 			alert(data.jokes);
-			alert(typeof data);
+			alert(data.jokes[0]);
+			console.log(data);
 			info = data;
 		}
 	  });
