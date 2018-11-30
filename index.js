@@ -1,8 +1,11 @@
+'use strict'
+
 var express = require('express');
 var app = express();
 var path = require('path');
 var dataStore;
 const AWS = require('aws-sdk');
+const fs = require('fs');
 
 app.use(express.static(path.join(__dirname)));
 app.use("/stylesheets", express.static(__dirname));
@@ -23,7 +26,12 @@ s3.getObject(params, function (err, data) {
             console.log(err, err.stack);
  } // an error occurred
     else {
-        dataStore = data;
+
+        fs.readFile(data, (err, data) => {  
+            if (err) throw err;
+            dataStore = JSON.parse(data);
+        });
+        
     }
 });
 
@@ -35,7 +43,7 @@ AWS.config.update({
 
 app.get('/', function (req, res) {
     res.header("Content-Type",'application/json');
-    res.send(JSON.stringify(dataStore.Body.toString()));
+    res.send(JSON.stringify(dataStore));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
