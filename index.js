@@ -3,9 +3,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-// var dataStore;
-// const AWS = require('aws-sdk');
-// const fs = require('fs');
+var dataStore;
+const AWS = require('aws-sdk');
+const fs = require('fs');
 
 app.use(express.static(path.join(__dirname)));
 app.use("/stylesheets", express.static(__dirname));
