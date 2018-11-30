@@ -33,6 +33,6 @@ app.get('/', function (req, res) {
 app.listen(process.env.PORT || 8080);
 
 AWS.config.update({
-    accessKeyId: ENV['AWS_ACCESS_KEY_ID'],
-    secretAccessKey: ENV['AWS_SECRET_ACCESS_KEY']
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
