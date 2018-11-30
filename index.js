@@ -26,7 +26,7 @@ s3.getObject(params, function (err, data) {
             console.log(err, err.stack);
  } // an error occurred
     else {
-        dataStore = JSON.parse(data);
+        dataStore = JSON.parse(data.Body);
     }
 });
 
