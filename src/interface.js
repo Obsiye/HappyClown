@@ -3,16 +3,13 @@ $(document).ready(function(){
 	var game = new Game(happyClown);
 	var clown;
 	var buttons;
-	var info;
+	var dataArray;
 
 	$.ajax({
 		url: '/data',
 		type: 'GET',
 		success: function(data) {
-			
-			alert(data);
-			alert(typeof data);
-			info = data;
+			dataArray = data;
 		}
 	  });
 
@@ -20,9 +17,7 @@ $(document).ready(function(){
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
-		
 		$('#happyStatus').text(clown.getHappyStatus());
-
 	}
 
 	function displayQuestion(game){
@@ -61,6 +56,5 @@ $(document).ready(function(){
 	function updateHappyStatus(){
 		$('#happyStatus').text(clown.getHappyStatus());
 	}
-
 
 });

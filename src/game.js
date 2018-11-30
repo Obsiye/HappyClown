@@ -6,6 +6,7 @@ function Game(happyClown){
 		new Joke(2, 'just laugh please'),
 		new Joke(5, 'ha')
 	];
+	this.happyClown = happyClown;
 	this.name;
 
 }
