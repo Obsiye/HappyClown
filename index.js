@@ -28,10 +28,10 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
 
+
 app.get('/', function (req, res) {
-    console.log(dataStore.jokes);
-     res.write(dataStore);
-    res.end();
+    res.header("Content-Type",'application/json');
+    res.send(JSON.stringify(dataStore));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
