@@ -16,10 +16,12 @@ var s3 = new AWS.S3();
 //     MaxKeys: 2
 // };
 
-var params = {Bucket: 'myBucket', Key: 'data.json'};
+var params = {Bucket: 'happyclownjokes', Key: 'data.json'};
 
 s3.getObject(params, function (err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
+    if (err) { 
+            console.log('yo that was an error');
+ } // an error occurred
     else {
         dataStore = data;
     }
