@@ -10,7 +10,7 @@ $(document).ready(function(){
 		clown = game.getHappyClown();
 		
 		$('#happyStatus').text(clown.getHappyStatus());
-		
+
 	}
 
 	function displayQuestion(game){
@@ -49,5 +49,6 @@ $(document).ready(function(){
 	function updateHappyStatus(){
 		$('#happyStatus').text(clown.getHappyStatus());
 	}
+
 
 });
