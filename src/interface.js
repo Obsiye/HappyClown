@@ -11,7 +11,8 @@ $(document).ready(function(){
 		success: function(data) {
 			
 			alert(data);
-			alert(data.jokes);
+			alert(data[0]);
+			alert(typeof data);
 			info = data;
 		}
 	  });
