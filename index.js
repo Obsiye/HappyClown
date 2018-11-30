@@ -42,7 +42,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/data', function (req, res) {
-    res.send(JSON.stringify(dataStore.jokes));
+    res.send(JSON.stringify(dataStore));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 

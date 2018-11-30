@@ -9,9 +9,10 @@ $(document).ready(function(){
 		url: '/data',
 		type: 'GET',
 		success: function(data) {
-			info = data;
+			
 			alert(data);
 			alert(data.jokes);
+			info = data;
 		}
 	  });
 
