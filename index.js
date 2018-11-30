@@ -29,6 +29,7 @@ s3.getObject(params, function (err, data) {
         console.log('hello');
         console.log(typeof data);
         dataStore = JSON.parse(data.Body);
+        console.log(typeof dataStore);
     }
 });
 
