@@ -11,7 +11,7 @@ $(document).ready(function(){
 		success: function(data) {
 			
 			alert(data);
-			alert(data[0]);
+			alert(data.jokes);
 			alert(typeof data);
 			info = data;
 		}
