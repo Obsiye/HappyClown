@@ -9,7 +9,9 @@ $(document).ready(function(){
 		url: '/data',
 		type: 'GET',
 		success: function(data) {
-			info = data
+			info = data;
+			alert(data);
+			alert(data.jokes);
 		}
 	  });
 
@@ -17,8 +19,7 @@ $(document).ready(function(){
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
-		alert(info);
-		alert(info[0]);
+		
 		$('#happyStatus').text(clown.getHappyStatus());
 
 	}
