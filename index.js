@@ -23,9 +23,13 @@ s3.listObjects(params, function (err, data) {
     }          // successful response
 });
 
+AWS.config.update({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+});
 
 app.get('/', function (req, res) {
-    console.log(dataStore.jokes);
+   alert(dataStore.jokes);
     // res.write(dataStore);
     // res.end();
     res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
@@ -33,7 +37,3 @@ app.get('/', function (req, res) {
 
 app.listen(process.env.PORT || 8080);
 
-AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-});
