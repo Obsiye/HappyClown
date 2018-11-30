@@ -20,7 +20,7 @@ var params = {Bucket: 'happyclownjokes', Key: 'data.json'};
 
 s3.getObject(params, function (err, data) {
     if (err) { 
-      console.log(err, err.stack)
+            console.log(err, err.stack);
  } // an error occurred
     else {
         dataStore = data;
@@ -34,9 +34,8 @@ AWS.config.update({
 
 
 app.get('/', function (req, res) {
-    console.log(JSON.stringify(dataStore.Body));
     res.header("Content-Type",'application/json');
-    res.send(JSON.stringify(dataStore.Body));
+    res.send(JSON.stringify(dataStore.Body.jokes.toString()));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
