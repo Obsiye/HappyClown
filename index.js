@@ -34,8 +34,9 @@ AWS.config.update({
 
 
 app.get('/', function (req, res) {
+    console.log(JSON.stringify(dataStore.Body));
     res.header("Content-Type",'application/json');
-    res.send(dataStore.Body.jokes);
+    res.send(JSON.stringify(dataStore.Body));
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
