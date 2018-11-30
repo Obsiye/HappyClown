@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var happyClown = new HappyClown();
 	var game = new Game(happyClown);
@@ -34,7 +33,7 @@ $(document).ready(function(){
 
 	displayQuestion(game);
 	displayClownHappyStatus(game);
-	
+
 	buttons = $(':button');
 	for (var i = 0; i < buttons.length; i++) {
 		
@@ -48,6 +47,5 @@ $(document).ready(function(){
 	function updateHappyStatus(){
 		$('#happyStatus').text(clown.getHappyStatus());
 	}
-
 
 });
