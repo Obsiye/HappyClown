@@ -26,10 +26,7 @@ s3.getObject(params, function (err, data) {
             console.log(err, err.stack);
  } // an error occurred
     else {
-        console.log('hello');
-        console.log(typeof data);
         dataStore = JSON.parse(data.Body);
-        console.log(dataStore.jokes);
     }
 });
 
@@ -45,7 +42,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/data', function (req, res) {
-    res.send(dataStore);
+    res.send(dataStore.jokes);
     // res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
 });
 
