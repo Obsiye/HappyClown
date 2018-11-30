@@ -29,7 +29,7 @@ AWS.config.update({
 });
 
 app.get('/', function (req, res) {
-   alert(dataStore.jokes);
+    console.log(dataStore.jokes);
     // res.write(dataStore);
     // res.end();
     res.sendFile(path.join(__dirname + '/views/happy_clown.html'));
