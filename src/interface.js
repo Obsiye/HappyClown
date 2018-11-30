@@ -4,11 +4,13 @@ $(document).ready(function(){
 	var clown;
 	var buttons;
 
+
+
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
 		
 		$('#happyStatus').text(clown.getHappyStatus());
-
+		
 	}
 
 	function displayQuestion(game){
