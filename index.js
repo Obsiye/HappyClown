@@ -14,8 +14,8 @@ app.use("/src", express.static(__dirname + '/src'));
 var s3 = new AWS.S3();
 
 var params = {
-    Bucket: 'happyclownjokes',
-    Key: 'data.json'
+    Bucket: process.env.BUCKET_NAME,
+    Key: process.env.BUCKET_KEY
 };
 
 
