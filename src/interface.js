@@ -13,9 +13,7 @@ $(document).ready(function(){
 	function uploadJokes(arrayOfJokes){
 		game.uploadJokes(arrayOfJokes);
 	}
-
-	uploadJokes(response);
-	
+	console.log(response);
 
 	function displayClownHappyStatus(game) {
 		clown = game.getHappyClown();
@@ -43,6 +41,7 @@ $(document).ready(function(){
 		console.log('hello not here');
 	}
 
+	uploadJokes(response);
 	displayQuestion(game);
 	displayClownHappyStatus(game);
 
