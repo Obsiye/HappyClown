@@ -10,7 +10,11 @@ $(document).ready(function(){
 	var clown;
 	var buttons;
 
-	console.log(response);
+	function uploadJokes(arrayOfJokes){
+		game.uploadJokes(arrayOfJokes);
+	}
+
+	uploadJokes(response);
 	
 
 	function displayClownHappyStatus(game) {

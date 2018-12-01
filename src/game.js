@@ -1,11 +1,7 @@
 'use strict'
 
 function Game(happyClown){
-	this.jokes = [new Joke(-1, 'the chicken did not cross the road'),
-		new Joke(1, 'an eye for an eye but not before an e. hehe.'),
-		new Joke(2, 'just laugh please'),
-		new Joke(5, 'ha')
-	];
+	this.jokes = [];
 	this.happyClown = happyClown;
 	this.name;
 
@@ -22,4 +18,11 @@ Game.prototype.getHappyClown = function (){
 
 Game.prototype.addJoke = function(joke){
     this.jokes.push(joke);
+}
+
+Game.prototype.uploadJokes = function(arrayOfJokes){
+	for(var index in arrayOfJokes){
+		var joke = arrayOfJokes[index];
+		this.jokes.push(new Joke(joke.laugh, joke.content))
+	}
 }
