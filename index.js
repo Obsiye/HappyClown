@@ -5,7 +5,6 @@ var app = express();
 var path = require('path');
 var dataStore;
 const AWS = require('aws-sdk');
-const fs = require('fs');
 
 app.use(express.static(path.join(__dirname)));
 app.use("/stylesheets", express.static(__dirname));
@@ -15,9 +14,10 @@ app.use("/src", express.static(__dirname + '/src'));
 var s3 = new AWS.S3();
 
 var params = {
-    Bucket: process.env.BUCKET_NAME,
-    Key: process.env.BUCKET_KEY
+    Bucket: 'happyclownjokes',
+    Key: 'data.json'
 };
+
 
 s3.getObject(params, function (err, data) {
     if (err) { 
