@@ -6,6 +6,7 @@ describe('Game', function(){
 	var jokes;
 	var joke;
 	var happyClown;
+	var arrayOfJokes = [{"content":"the chicken did not cross the road", "laugh":-5}];
 
 	beforeEach(function(){
 		happyClown = jasmine.createSpyObj('happyClown', ['getHappyStatus','getHappyClown']);
@@ -22,11 +23,10 @@ describe('Game', function(){
 	});
 
 	it('should upload jokes', function(){
-		arrayOfJokes = [
-			{"content":"the chicken did not cross the road", "laugh":-5}
-		]
+		console.log(arrayOfJokes);
 		game.uploadJokes(arryOfJokes);
-		expect(game.getJokes()[0].getDescription()).toEqual(arrayOfJokes[0].content)
+		firstGameJoke = game.getJokes()[0];
+		expect(firstGameJoke.getDescription()).toEqual(arrayOfJokes[0].content)
 	});
 
 	it('should store a happyclown', function () {
