@@ -13,7 +13,7 @@ $(document).ready(function(){
 	function uploadJokes(arrayOfJokes){
 		game.uploadJokes(arrayOfJokes);
 	}
-	console.log('hello look here');
+
 	uploadJokes(response);
 	
 
@@ -23,9 +23,9 @@ $(document).ready(function(){
 	}
 
 	function displayQuestion(game){
-		console.log('hello down here');
+		console.log('hello');
 		jokes = game.getJokes();
-
+		console.log(game.getJokes());
 		for(var i = 1; i < 5; i++){
 			var button;
 			var jk;
