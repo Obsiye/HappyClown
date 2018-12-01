@@ -25,6 +25,8 @@ s3.getObject(params, function (err, data) {
     }
     else {
         dataStore = JSON.parse(data.Body);
+        console.log('hello look here');
+        console.log(dataStore.jokes);
     }
 });
 
