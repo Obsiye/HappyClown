@@ -13,7 +13,8 @@ $(document).ready(function(){
 	function uploadJokes(arrayOfJokes){
 		game.uploadJokes(arrayOfJokes);
 	}
-
+	console.log('hello look here');
+	console.log(response);
 	uploadJokes(response);
 	
 
