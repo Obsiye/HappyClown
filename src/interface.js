@@ -1,18 +1,16 @@
+var response;
+
+$.getJSON('/data', function(data){
+	response = data.jokes;
+});
+
 $(document).ready(function(){
 	var happyClown = new HappyClown();
 	var game = new Game(happyClown);
 	var clown;
 	var buttons;
-	var dataArray;
 
-	$.ajax({
-		url: '/data',
-		type: 'GET',
-		success: function(data) {
-			dataArray = data;
-		}
-	  });
-
+	console.log(response);
 	
 
 	function displayClownHappyStatus(game) {
@@ -56,5 +54,5 @@ $(document).ready(function(){
 	function updateHappyStatus(){
 		$('#happyStatus').text(clown.getHappyStatus());
 	}
-
+	
 });

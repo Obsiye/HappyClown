@@ -15,8 +15,8 @@ app.use("/src", express.static(__dirname + '/src'));
 var s3 = new AWS.S3();
 
 var params = {
-    Bucket: 'happyclownjokes',
-    Key: 'data.json'
+    Bucket: process.env.BUCKET_NAME,
+    Key: process.env.BUCKET_KEY
 };
 
 s3.getObject(params, function (err, data) {
@@ -39,7 +39,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/data', function (req, res) {
-    res.send(dataStore.jokes);
+    res.send(dataStore);
 });
 
 app.listen(process.env.PORT || 8080);

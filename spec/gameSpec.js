@@ -21,6 +21,14 @@ describe('Game', function(){
 		expect(game.getJokes().length).toEqual(5);
 	});
 
+	it('should upload jokes', function(){
+		arrayOfJokes = [
+			{"content":"the chicken did not cross the road", "laugh":-5}
+		]
+		game.uploadJokes(arryOfJokes);
+		expect(game.getJokes()[0].getDescription()).toEqual(arrayOfJokes[0].content)
+	});
+
 	it('should store a happyclown', function () {
 		happyClown = game.getHappyClown();
 		expect(happyClown.getHappyStatus()).toEqual(10);

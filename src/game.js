@@ -12,29 +12,14 @@ function Game(happyClown){
 }
 
 
-Game.prototype.getJokes = function(joke){
+Game.prototype.getJokes = function(){
    return this.jokes;
 }
 
-Game.prototype.getHappyClown = function (happyClown){
+Game.prototype.getHappyClown = function (){
 	return this.happyClown;
 }
 
 Game.prototype.addJoke = function(joke){
     this.jokes.push(joke);
-}
-
-
-
-function Greeter(){
-	this.name;
-
-	function setName(name){
-		this.name = name;
-	}
-
-	function getName(){
-
-	}
-
 }
