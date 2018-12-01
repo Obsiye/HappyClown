@@ -14,7 +14,6 @@ $(document).ready(function(){
 		game.uploadJokes(arrayOfJokes);
 	}
 	console.log('hello look here');
-	console.log(response);
 	uploadJokes(response);
 	
 
@@ -24,9 +23,9 @@ $(document).ready(function(){
 	}
 
 	function displayQuestion(game){
+		console.log('hello down here');
 		jokes = game.getJokes();
-		console.log(jokes);
-		console.log('hello im in display question');
+
 		for(var i = 1; i < 5; i++){
 			var button;
 			var jk;
@@ -41,7 +40,7 @@ $(document).ready(function(){
 			button.appendChild(content);
 			$('#joke_choices').append(button);
 		}
-		console.log('hello im in end of display question');
+		console.log('hello not here');
 	}
 
 	displayQuestion(game);
